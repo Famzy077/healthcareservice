@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --primary-color: rgba(36, 104, 231, 0.952);
+  }
+  .contain{
+    background-color: rgba(0, 0, 0, 0.603);
+    padding: 30px;
+    font-family: sans-serif;
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .formDiv{
+    height: 100vh;
+  }
+  .main-wrap{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    place-content: center;
+    width: 450px;
+  }
+  span{
+    color: var(--primary-color);
+    font-family:Verdana ;
+  }
+  .headText{
+    position: relative;
+    bottom: 15px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.575);
+  }
+  .headText h1{
+    color: var(--primary-color);
+    font-size: 2em;
+    font-weight: 700;
+  }
+  .headText p{
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+  }
+  form{
+    box-shadow: 0 0 10px 0 lightgray;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgba(17, 17, 17, 0.692);
+  }
+  form input{
+    border: 1px solid gray;
+    width: 97%;
+    padding: 8px;
+    margin: 10px 0;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  form input:focus{
+    background-color: whitesmoke;
+  }
+  .special input{
+    width: auto;
+  }
+  .labe_{
+    margin-left: 20px;
+  }
+
+  .btn input{
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+  }
+  .btn input:hover{
+    background-color: rgba(8, 51, 170, 0.795);
+    cursor: pointer;
+  }
+  .forgetpass :Link{
+    text-decoration: none;
+  }
+  .forgetpass :Link:hover{
+    text-decoration: underline;
+  }
+  .forgetpass{
+    text-align: end;
+    margin: 3px 0;
+  }
+  .pForget{
+    text-align: center;
+  }
+  .errorMsg{
+    color: red;
+    text-align: center;
+  }
+
+  @media screen and (width <= 320px){
+    .contain{
+      padding: 10px 0 ;
+      place-content: center;
+    }
+
+    .headText h1{
+      font-size: 20px;
+      margin-top: 20px;
+      color: gray;
+    }
+    .main-wrap{
+      width: 300px;
+    }
+    form input{
+      width: 95%;
+    }
+    
+  }
+  @media (width > 320px) and (width <=500px){
+    .headText h1{
+      font-size: 20px;
+      margin-top: 20px;
+      color: gray;
+    }
+    .contain{
+      padding:  10px;
+      place-content: center;
+      height: 100vh;
+    }
+    .main-wrap{
+      width: 350px;
+    }
+    
+    form input{
+      width: 95%;
+    }
+  }
