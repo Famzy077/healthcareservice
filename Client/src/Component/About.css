@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    contain: layout;
+}
+.helvatic{
+    font-family:Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.service{
+    box-shadow: 0 0 10px rgb(175, 175, 226);
+}
+.service .iconSection{
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.choose{
+    display: flex;
+    gap: 50px;
+}
+.count{
+    background-image: linear-gradient( orangered, rgb(13, 123, 160));
+    display: flex;
+    padding: 95px  10px;
+    gap: 25px;
+}
+.expertBox{
+    margin: 40px 1px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 60px;
+}
+.expert{
+    box-shadow: 0 0 10px lightblue;
+    border-radius: 15px;
+    min-height: 70vh;
+    /* place-content: center; */
+}
+
+.chooseBox{
+    margin-top: 40px;
+}
+.gallery{
+    background-image: linear-gradient(orange, lightblue);
+}
+
+.mainFind{
+    padding-top: 40px;
+    
+}
+.focusSort{
+    transition: 2s;
+}
+.focusSort:hover{
+    background-color: rgba(50, 144, 233, 0.815);
+    border: 2px solid blue;
+}
+.focusSort:active{
+    background-color: rgb(26, 13, 201);
+    border: 2px solid blue;
+}
+.focusSort:hover h1{
+    color: white;
+}
+
+.doctorData{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.blogData{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.contactPage{
+    justify-content: space-between;
+}
+.contactPage input{
+    width: 100%;
+}
+.formSection input{
+    width: 98%;
+    padding: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (width <= 500px){
+    .section1{
+        padding: 10px;
+    }
+    .section1 h1{
+        font-size: 2em;
+    }
+    .choose{
+        flex-direction: column-reverse;
+    }
+    .count{
+        margin: 25px;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .provide{
+        font-size: 1.9em;
+        font-weight: 600;
+    }
+    .helvatic{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 30px;
+    }
+    .service{
+        padding: 10px;
+    }
+    .choose{
+        margin:20px;
+    }
+    .chooseBox h1{
+        font-size: 1.3em;
+    }
+    .chooseBox{
+        flex-wrap: wrap;
+    }
+    .service .iconSection{
+        top: 11px;
+        left: 10px;
+    }
+    .chooseUs{
+        font-size: 1.7em;
+        margin: 0;
+        padding: 0 ;
+    }
+    .expertBox{
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        margin: 10px 1px;
+        padding: 20px;
+    }
+    .meetExpert{
+        font-size: 2.3em;
+    }
+
+    .mainFind h1{
+        font-size: 2em;
+    }
+    .doctorData{
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+    .blogData{
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .contactPage{
+        flex-direction: column;
+    }
+    .formSection{
+        margin: 20px;
+        box-shadow: 0 0 10px 0 gray;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (width > 500px) and (width <=900px){
+    .choose{
+        flex-direction: column-reverse;
+    }
+    .count{
+        flex-wrap: wrap;
+        gap: 60px;
+        padding: 20px;
+        margin: 20px;
+    }
+    .contactPage{
+        flex-direction: column;
+    }
+    .formSection{
+        margin: 60px;
+        box-shadow: 0 0 10px 0 gray;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (width > 900px) and (width <=1100px){
+    .choose{
+        flex-direction: column-reverse;
+    }
+    .count{
+        flex-wrap: wrap;
+        gap: 60px;
+        padding: 20px;
+    }
+    .contactPage {
+        flex-direction: column;
+        margin: 10px;
+    }
+    .formSection{
+        margin: 20px 60px;
+        box-shadow: 0 0 10px 0 gray;
+        transform: translateY(0);
+    }
+    .formSection input{
+        width: 98%;
+    }
+    .myForm{
+        margin: 10px;
+        padding: auto;
+    }
+}

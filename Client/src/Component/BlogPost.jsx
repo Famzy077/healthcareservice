@@ -12,7 +12,7 @@ const BlogPost = () => {
   return (
     <div className="blogPost">
         <h1 className="text-center text-5xl font-semibold m-4">BlogPost</h1>
-        <h2 className="text-4xl font-semibold text-blue-700">Latest Update</h2>
+        <h2 className="text-4xl font-semibold text-blue-700 text-center">Latest Update</h2>
         <div className="box flex md:flex-wrap p-3 gap-5">
 
         <div className="p-3">

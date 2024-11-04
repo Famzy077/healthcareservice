@@ -62,27 +62,28 @@ const Home = () => {
         <nav>
           <ul>
             <li><Link to={'/home'}>Home</Link></li>
-            <li><Link to={''}>Service</Link></li>
+            <li><Link to={'/about'}>About</Link></li>
+            <li><Link to={'/findDoctor'}>Find Doctor</Link></li>
             <div className='userIcon'>
-            <li>Pharmacy
+            {/* <li>Pharmacy
               <ul className='drop-down'>
                 <li><Link>Drug</Link></li>
                 <li><Link>Injection</Link></li>
                 <li><Link>Treatment</Link></li>
               </ul>
-            </li>
+            </li> */}
             </div>
-            <li><Link to={''}>Dentist</Link></li>
+            <li><Link to={'/blog'}>Blog</Link></li>
+            <li><Link to={'/contact'}>Contact</Link></li>
             <div className='userIcon'>
               <li ><i className='fa-solid fa-user'></i>
               <ul className='drop-down'>
                 <li><Link to={'/dashboard'}>Profile</Link></li>
-                <li onClick={handleLogout}>Logout</li>
+                <li onClick={handleLogout}><Link to={'/'}>Logout</Link></li>
                 <li><Link>Bookmark</Link></li>
               </ul>
             </li>
             </div>
-            <li><Link to={''}>About</Link></li>
           </ul>
         </nav>
           <div className='booking'>
@@ -92,17 +93,18 @@ const Home = () => {
         {isOpen && (
           <div className='toggleMenu'>
             <div><Link to={'/home'}>Home</Link></div>
-            <div><Link to={''}>Service</Link></div>
-            <div onClick={navToogle}><Link to={''}>Pharmacy 👆</Link></div>
+            <div><Link to={'/about'}>About</Link></div>
+            <div><Link to={'/findDoctor'}>Find Doctor</Link></div>
+            {/* <div onClick={navToogle}><Link to={''}>Pharmacy 👆</Link></div>
             {nav && (
               <>
                 <div><Link to={''}>Drug</Link></div> <hr />
                 <div><Link to={''}>Injection</Link></div> <hr />
               </>
-            )}
-            <div><Link to={''}>Dentist</Link></div>
+            )} */}
+            <div><Link to={'/blog'}>Blog</Link></div>
+            <div><Link to={'/contact'}>Contact</Link></div>
             <div><Link to={'/dashboard'}>Profile</Link></div>
-            <div><Link to={''}>About</Link></div>
             <div onClick={handleLogout}><Link to={'/'}>Logout</Link></div>
           </div>
         )}
@@ -404,7 +406,7 @@ const Home = () => {
       </div>
 
       <div className="arrow-top text-end relative my-10 mx-2">
-        <a href="#top" className="text-3xl text-white font-bold px-5 bg-blue-800 rounded-full"><i className="fa-solid fa-arrow-up"></i></a>
+        <a href="#top" className="text-3xl text-blue-900 font-bold items-center p-5 bg-gray-100 shadow-xl h-[50px] w-[50px] rounded-full"><i className="fa-solid fa-arrow-up"></i></a>
       </div>
 
       <footer className=''>

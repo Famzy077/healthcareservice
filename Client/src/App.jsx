@@ -7,6 +7,10 @@ import Forgotpass from './Component/Forgotpass'
 import ResetPass from './Component/Resetpass'
 import Dashboard from './Component/Dashboard'
 import Department from './Component/Department'
+import About from './Component/About'
+import FindDoctor from './Component/FindDoctor'
+import Blog from './Component/Blog'
+import Contact from './Component/Contact'
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -37,6 +41,22 @@ const App = () => {
     {
       path: '/department',
       element: <Department/>
+    },
+    {
+      path: '/about',
+      element: <About/>
+    },
+    {
+      path: '/findDoctor',
+      element: <FindDoctor/>
+    },
+    {
+      path: '/blog',
+      element: <Blog/>
+    },
+    {
+      path: '/contact',
+      element: <Contact/>
     }
   ])
   return(

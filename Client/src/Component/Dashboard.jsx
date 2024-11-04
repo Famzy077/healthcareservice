@@ -21,9 +21,9 @@ const dashboard = () =>{
   },[])
   return(
       <div className="bg-blue-500 flex flex-col items-center justify-center h-screen">
-        <h1 className='text-white text-4xl'>Welcome to Dashboard</h1>
-        <p className='text-2xl text-white'>Something amazing is coming 🚶‍♀️🚶‍♂️</p>
-        <p className='text-brown-900 font-semibold'>Click to go back to<Link to={'/home'}> home page</Link></p>
+        <h1 className='text-white text-2xl md:text-4xl'>Welcome to Dashboard</h1>
+        <p className='text-xl md:text-2xl text-white'>Something amazing is coming🚶</p>
+        <p className='text-brown-900 font-semibold'><Link to={'/home'}>Click to go back to home page</Link></p>
       </div>
   )
 }

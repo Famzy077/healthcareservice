@@ -46,17 +46,17 @@ const Signup = () => {
             </div>
             <div className="special">
               <label htmlFor="gender">Gender:</label> <br/>
-              <label className="labe_" htmlFor="male">Male</label>
+              <label className="labe_ mx-2" htmlFor="male">Male</label>
               <input type="radio" name="gender"/>
-              <label className="labe_" htmlFor="female">Female</label>
+              <label className="labe_ mx-2" htmlFor="female">Female</label>
               <input type="radio" name="gender"/>
             </div>
             <div>
               <label htmlFor="pass">Password:</label>
-              <input type="password" onChange={(e) => Setpassword(e.target.value)} placeholder="••••••••••••"/>
+              <input type="password" onChange={(e) => Setpassword(e.target.value)} required placeholder="••••••••••••"/>
             </div>
             <div className="special">
-              <label className='link' htmlFor="terms"><Link to={''}>Terms and Condition</Link></label>
+              <label className='link m-2' htmlFor="terms"><Link to={''}>Terms and Condition</Link></label>
               <input type="checkbox" required/>
             </div>
             <div className="btn">
