@@ -1,26 +1,16 @@
 import express from 'express'
 import dotenv from 'dotenv'
-// import connectDb from '../config/DbConnect.js';
-import mongoose from "mongoose";
+import connectDb from '../config/DbConnect.js';
 import router from '../routes/user.js';
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
+
 dotenv.config()
 const PORT = process.env.PORT || 5000
 const app = express()
 
 
-const connectDb = async() => {
-    try {
-        const conn = await mongoose.connect('mongodb://localhost:27017/Data')
-        console.log(`Connected to the data base successfully ${conn.connection.host}`)
-    } catch (error) {
-        console.log(error, 'Mongodb is not connect to database');
-        process.exit(1)
-    }
-}
-
-// Connect To DataBase
+// Connected To DataBase
 connectDb()
 app.use(express.json())
 app.use(cors({
