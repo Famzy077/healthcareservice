@@ -1,4 +1,4 @@
 const loadApp = async() => {
-    await import('./Api/index.js')
+    await import('./index.js')
 }
 loadApp()

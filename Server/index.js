@@ -1,7 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import connectDb from '../config/DbConnect.js';
-import router from '../routes/user.js';
+import connectDb from './config/DbConnect.js';
+import router from './routes/user.js';
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 
