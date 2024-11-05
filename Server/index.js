@@ -13,22 +13,22 @@ const cors = require('cors');
 const express = require('express');
 const app = express();
 
-const allowedOrigins = [
-  'http://localhost:5173', // Local dev
-  'https://healthcareservice-client-pl6pbjrgt-akinola-femis-projects.vercel.app' // Vercel production
-];
+// const allowedOrigins = [
+//   'http://localhost:5173', // Local dev
+//   'https://healthcareservice-client-pl6pbjrgt-akinola-femis-projects.vercel.app' // Vercel production
+// ];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ['GET', 'POST', 'OPTIONS'],
-  credentials: true
-};
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   methods: ['GET', 'POST', 'OPTIONS'],
+//   credentials: true
+// };
 
 
 
@@ -42,7 +42,7 @@ app.use((req, res, next) => {
 // Connected To DataBase
 connectDb()
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json())
 app.use(cookieParser())
 app.use('/auth', router);
