@@ -12,10 +12,13 @@ const app = express()
 // Connected To DataBase
 connectDb()
 
-app.use(cors({
-    origin: 'healthcareservice-client.vercel.app',
-    credentials: true,
-    }))
+const corsOptions = {
+    origin: 'https://healthcareservice-client.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Allow credentials if needed
+};
+
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookieParser())
 app.use('/auth', router);
