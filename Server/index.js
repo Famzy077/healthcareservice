@@ -9,10 +9,6 @@ dotenv.config()
 const PORT = process.env.PORT || 5000
 const app = express()
 
-const cors = require('cors');
-const express = require('express');
-const app = express();
-
 // Connected To DataBase
 connectDb()
 
