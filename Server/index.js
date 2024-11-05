@@ -8,16 +8,22 @@ import cookieParser from 'cookie-parser'
 dotenv.config()
 const PORT = process.env.PORT || 5000
 const app = express()
-
+let whiteList = ['https://vercel.com']
+const corsOptions = {
+    origin: function(origin, callback) {
+        if(whiteList.indexOf(origin) !== -1) {
+            callback(null, true)
+        } else {
+            callback(new Error('Block by CORS'))
+        }
+    },
+    optionSuccessStatus: 200
+}
 
 // Connected To DataBase
 connectDb()
 app.use(express.json())
-app.use(cors({
-    origin: ['/https://healthcareservice-client.vercel.app'],
-    mathods: ['GET', 'POST', 'PUT'],
-    credentials: true
-}))
+app.use(cors(corsOptions))
 app.use(cookieParser())
 app.use('/auth', router);
 app.listen(PORT, () => {
