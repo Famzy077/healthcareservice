@@ -13,7 +13,7 @@ const Signup = () => {
   const navigate = useNavigate()
   const HandleSubmit = (e) => {
     e.preventDefault()
-    Axios.post('http://localhost:4005/auth/signup', {
+    Axios.post('https://healthcareservice-server.vercel.app//auth/signup', {
       username,
       email,
       password

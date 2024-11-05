@@ -14,7 +14,7 @@ const app = express()
 connectDb()
 app.use(express.json())
 app.use(cors({
-    origin: ['http://localhost:5173'],
+    origin: ['/https://healthcareservice-client.vercel.app'],
     credentials: true
 }))
 app.use(cookieParser())
