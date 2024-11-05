@@ -15,6 +15,7 @@ connectDb()
 app.use(express.json())
 app.use(cors({
     origin: ['/https://healthcareservice-client.vercel.app'],
+    mathods: ['GET', 'POST', 'PUT'],
     credentials: true
 }))
 app.use(cookieParser())
