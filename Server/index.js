@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 // Connected To DataBase
 connectDb()
 app.use(express.json())
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(cookieParser())
 app.use('/auth', router);
 app.listen(PORT, () => {
