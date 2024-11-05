@@ -30,7 +30,6 @@ const corsOptions = {
   credentials: true
 };
 
-app.use(cors(corsOptions));
 
 
 // app.use((req, res, next) => {
@@ -42,6 +41,8 @@ app.use(cors(corsOptions));
 
 // Connected To DataBase
 connectDb()
+
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookieParser())
 app.use('/auth', router);
