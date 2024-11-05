@@ -184,14 +184,13 @@ a:hover{
 
 .section3{
     background-image: radial-gradient(rgb(252, 249, 249), rgb(143, 223, 250));
-    /* margin: 50px; */
     padding: 30px;
     display: flex;
     gap: 30px;
 }
 .section3 .animate .quality{
     position: relative;
-    top: 120px;
+    top: 100px;
     animation: rotate 6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
@@ -199,7 +198,7 @@ a:hover{
 .section3 .animate .verify{
     position: relative;
     left: 70px;
-    bottom: 40%;
+    bottom: 15px;
 }
 @keyframes rotate {
     to{

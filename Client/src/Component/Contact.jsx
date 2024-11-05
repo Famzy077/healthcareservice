@@ -142,7 +142,7 @@ const Contact = () => {
         </div>
       </div>
         <div>
-            <div className="flex justify-center items-center m-8">
+            <div className="flex justify-center items-center m-8 mb-24">
                 <iframe className="w-[900px] h-[300px] md:h-[450px] rounded-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126844.05799277902!2d3.286783939062486!3d6.5372376532632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1730705719682!5m2!1sen!2sng" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>

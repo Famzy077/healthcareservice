@@ -15,9 +15,9 @@ const doctorData = [
         x: "href://famzy0288"
     },
     {
-        img: './images/Famzy.png',
+        img: 'https://html.laralink.com/prohealth/assets/img/doctors/doctor_5.png',
         specialist:'Emergency Department',
-        name: 'Akinola Festus',
+        name: 'Jonees Festus',
         department: 'Emergency Medicine Specialist',
         text: 'Dr. Lee is a skilled emergency medicine physician with expertise in the treatment of acute medical conditions. ',
         linkedin: "href://famzy1223",
@@ -159,79 +159,70 @@ const DoctorData = () => {
     const itemsPerPage = 6; // Number of items to display per page
     const [currentPage, setCurrentPage] = useState(1);
 
-    // Calculate the total number of pages
-    const totalPages = Math.ceil(doctorData.length / itemsPerPage);
-
-    // Calculate the current items to display
+    // Calculate the current items to 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentItems = doctorData.slice(startIndex, startIndex + itemsPerPage);
 
-    // Function to handle page change
-    const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
-    };
-
-    const [active, setActive] = React.useState(1);
- 
   const getItemProps = (index) =>
     ({
-      variant: active === index ? "filled" : "text",
+      variant: currentPage === index ? "filled" : "text",
       color: "gray",
-      onClick: () => setActive(index),
+      onClick: () => setCurrentPage(index),
     });
  
   const next = () => {
-    if (active === 5) return;
+    if (currentPage === 3) return;
  
-    setActive(active + 1);
+    setCurrentPage(currentPage + 1);
   };
  
   const prev = () => {
-    if (active === 1) return;
+    if (currentPage === 1) return;
  
-    setActive(active - 1);
+    setCurrentPage(currentPage - 1);
   };
   return (
-    <div className="grid doctorData p-5 md:grid-cols-3">
-        {currentItems.flatMap((data, key) => 
-        <div className="bg-[whitesmoke] border border-blue-gray-200 m-2 rounded-t-xl text-center" key={key}>
-            <div className=" mb-10 rounded-t-xl bg-light-blue-50">
-                <img className="rounded-ful rounded-xl rounded-b-[0] w-[100%] h-[270px] object-fill bg-light-blue-50" src={data.img} alt="profile picture" /><hr />
-                <h2 className="bg-blue-700 text-white mx-8 transform translate-y-[-4%] p-3 rounded-t-[20px] font-semibold ">{data.specialist}</h2>
-            </div>
-            <div className="m-5 my-10">
-                <h1 className="text-xl text-gray-800 font-semibold md:text-2xl">{`${data.name}`}</h1>
-                <p className="text-xl">{`${data.department}`}</p>
-                <p className="text-gray-700">{`${data.text}`}</p>
-            </div>
-            <main className="m-5 text-2xl">
-                <a className="m-2 drop-shadow-lg" href={data.linkedin}><i className="fa-brands fa-linkedin   rounded-full bg-blue-700 p-3 text-white"></i></a>
-                <a className="m-2 drop-shadow-lg" href={data.x}><i className="fa-brands fa-square-facebook  rounded-full bg-blue-700 p-3 text-white"></i></a>
-                <a className="m-2 drop-shadow-lg" href={data.instagram}><i className="fa-brands fa-instagram  rounded-full bg-blue-700 p-3 text-white"></i></a>
-            </main>
-        </div>)}
+    <div>
+        <main  className="grid doctorData p-5 md:grid-cols-3">
+          {currentItems.flatMap((data, key) => 
+          <div className="bg-[whitesmoke] border border-blue-gray-200 m-2 rounded-t-xl text-center" key={key}>
+              <div className=" mb-10 rounded-t-xl bg-light-blue-50">
+                  <img className="rounded-ful rounded-xl rounded-b-[0] w-[100%] h-[270px] object-fill bg-light-blue-50" src={data.img} alt="profile picture" /><hr />
+                  <h2 className="bg-blue-700 text-white mx-8 transform translate-y-[-4%] p-3 rounded-t-[20px] font-semibold ">{data.specialist}</h2>
+              </div>
+              <div className="m-5 my-10">
+                  <h1 className="text-xl text-gray-800 font-semibold md:text-2xl">{`${data.name}`}</h1>
+                  <p className="text-xl">{`${data.department}`}</p>
+                  <p className="text-gray-700">{`${data.text}`}</p>
+              </div>
+              <main className="m-5 text-2xl">
+                  <a className="m-2 drop-shadow-lg" href={data.linkedin}><i className="fa-brands fa-linkedin   rounded-full bg-blue-700 p-3 text-white"></i></a>
+                  <a className="m-2 drop-shadow-lg" href={data.x}><i className="fa-brands fa-square-facebook  rounded-full bg-blue-700 p-3 text-white"></i></a>
+                  <a className="m-2 drop-shadow-lg" href={data.instagram}><i className="fa-brands fa-instagram  rounded-full bg-blue-700 p-3 text-white"></i></a>
+              </main>
+          </div>)}
+        </main>
+
 
         <div className="flex items-center gap-4">
       <Button
         variant="text"
         className="flex items-center gap-2"
         onClick={prev}
-        disabled={active === 1}
+        disabled={currentPage === 1}
       >
         <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" /> Previous
       </Button>
       <div className="flex items-center gap-2">
-        <IconButton {...getItemProps(1)}>1</IconButton>
-        <IconButton {...getItemProps(2)}>2</IconButton>
-        <IconButton {...getItemProps(3)}>3</IconButton>
-        <IconButton {...getItemProps(4)}>4</IconButton>
-        <IconButton {...getItemProps(5)}>5</IconButton>
+            <IconButton {...getItemProps(1)}><a href="#">1</a></IconButton>
+            <IconButton {...getItemProps(2)}><a href="#">2</a></IconButton>
+            <IconButton {...getItemProps(3)}><a href="#">3</a></IconButton>
       </div>
       <Button
         variant="text"
         className="flex items-center gap-2"
         onClick={next}
-        disabled={active === 5}
+        disabled={currentPage === 3}
       >
         Next
         <ArrowRightIcon strokeWidth={2} className="h-4 w-4" />
