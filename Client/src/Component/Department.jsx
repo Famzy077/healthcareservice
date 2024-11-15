@@ -4,27 +4,27 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const departmentData = [
-    {   img: `/images/emergency.png`,
+    {   img: `https://html.laralink.com/prohealth/assets/img/home_1/department_icon_1.svg`,
         service: 'Emergency', 
         department: 'Department'
     },
-    {   img: `/images/Pediatric.png`,
+    {   img: `https://html.laralink.com/prohealth/assets/img/home_1/department_icon_2.svg`,
         service: 'Pediatric', 
         department: 'Department'
     },
-    {   img: `/images/Gynecology.png`,
+    {   img: `https://html.laralink.com/prohealth/assets/img/home_1/department_icon_3.svg`,
         service: 'Gynecology', 
         department: 'Department'
     },
-    {   img: `/images/Cardiology.png`,
+    {   img: `https://html.laralink.com/prohealth/assets/img/home_1/department_icon_4.svg`,
         service: 'Cardiology', 
         department: 'Department'
     },
-    {   img: `/images/Neurology.png`,
+    {   img: `https://html.laralink.com/prohealth/assets/img/home_1/department_icon_5.svg`,
         service: 'Neurology', 
         department: 'Department'
     },
-    {   img: `/images/Psychiatry.png`,
+    {   img: `https://html.laralink.com/prohealth/assets/img/home_1/department_icon_6.svg`,
         service: 'Psychiatry', 
         department: 'Department'
     },

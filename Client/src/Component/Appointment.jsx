@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import {
   Popover,
   PopoverHandler,
@@ -8,14 +8,18 @@ import {
  
 
 const Appointment = () => {
+  const handleSubmit = (index) => {
+    index.preventDefault()
+    index.target.reset()
+  }
   return (
     <div>
-        <div className="">
-          <h2 className='m-5 mt-0 text-4xl font-semibold'>BOOK AN</h2>
-          <h1 className='m-4 mt-0 text-blue-900 text-4xl font-semibold'>Appointment</h1>
+        <div>
+          <h2 className='m-5 mt-0 text-3xl font-semibold'>BOOK AN</h2>
+          <h1 className='m-4 mt-0 text-blue-900 text-3xl font-semibold'>Appointment</h1>
         </div>
         <section className='appointment flex justify-center gap-20'>
-          <form className='shadow-sm m-0 p-0' action="">
+          <form className='shadow-none m-0 p-0' onSubmit={handleSubmit} action="">
             <div>
               <section className='appointInput'>
                 <main className='name flex'>
@@ -77,7 +81,7 @@ const Appointment = () => {
                   }}
                 >
                   <PopoverHandler>
-                    <button type='submit'><Button className='bg-blue-900'>Submit</Button></button>
+                    <Button type="submit"className='bg-blue-900'>Submit</Button>
                   </PopoverHandler>
                   <PopoverContent>
                     Thanks for booking <b/>appointment with us.
@@ -86,9 +90,9 @@ const Appointment = () => {
             </div>
           </form>
 
-          <div className="appoint">
-            <div className="imageBox">
-              <img className='w-90%] rounded-xl h-[80vh]' src="https://html.laralink.com/prohealth/assets/img/home_1/appointment.jpeg" alt="doctor appointment" />
+          <div className="appoint ">
+            <div>
+              <img className='w-[100%] rounded-xl h-[fit-content] md:h-[80vh] ' src="https://html.laralink.com/prohealth/assets/img/home_1/appointment.jpeg" alt="doctor appointment" />
             </div>
           </div>
         </section>

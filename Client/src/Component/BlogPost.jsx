@@ -11,9 +11,9 @@ import {
 const BlogPost = () => {
   return (
     <div className="blogPost">
-        <h1 className="text-center text-5xl font-semibold m-4">BlogPost</h1>
-        <h2 className="text-4xl font-semibold text-blue-700 text-center">Latest Update</h2>
-        <div className="box flex md:flex-wrap p-3 gap-5">
+        <h1 className="text-center text-4xl font-semibold m-4">BlogPost</h1>
+        <h2 className="text-3xl font-semibold text-blue-700 text-center">Latest Update</h2>
+        <div className="BlogBox  p-3 gap-5">
 
         <div className="p-3">
             <Card className="max-w-[24rem] overflow-hidden">
@@ -30,7 +30,7 @@ const BlogPost = () => {
             </CardHeader>
             <CardBody>
                 <Typography variant="h4" color="blue-gray">
-                UI/UX Review Check
+                Doctor Reviews 
                 </Typography>
                 <Typography variant="lead" color="gray" className="mt-3 font-normal">
                 Because it&apos;s about motivating the doers. Because I&apos;m here to
@@ -78,7 +78,7 @@ const BlogPost = () => {
             </CardHeader>
             <CardBody>
                 <Typography variant="h4" color="blue-gray">
-                UI/UX Review Check
+                Nurse Review Check
                 </Typography>
                 <Typography variant="lead" color="gray" className="mt-3 font-normal">
                 Because it&apos;s about motivating the doers. Because I&apos;m here to
@@ -126,7 +126,7 @@ const BlogPost = () => {
             </CardHeader>
             <CardBody>
                 <Typography variant="h4" color="blue-gray">
-                UI/UX Review Check
+                Doctor Mother Care
                 </Typography>
                 <Typography variant="lead" color="gray" className="mt-3 font-normal">
                 Because it&apos;s about motivating the doers. Because I&apos;m here to

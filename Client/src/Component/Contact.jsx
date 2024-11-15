@@ -6,7 +6,7 @@ const Contact = () => {
 
     Axios.defaults.withCredentials = true;
     const handleLogout = () =>{
-        Axios.get('https://locahost:4005/auth/logout')
+        Axios.get('https://healthcareservice-server.vercel.app/auth/logout')
         .then(res => {
             if(res.data.status){
                 window.location.href = '/'
@@ -90,7 +90,7 @@ const Contact = () => {
         </main>
 
         <section className="grid justify-cener py-10 bg-white mx-64 p-4 rounded-2xl shadow-xl formSection translate-y-[-20%]">
-            <form className="shadow-none myForm" action="">
+            <form className="shadow-none myForm" onSubmit={handleSubmit} action="">
                 <main className="flex contactPage">
                     <div>
                         <label htmlFor="name">Name</label>
@@ -175,8 +175,8 @@ const Contact = () => {
           <div>
             <h2>Be Our Subscribers</h2>
             <p>To get the latest news about health from our experts</p>
-            <form className='shadow-none' action="">
-              <input className='w-auto p-1' type="text" placeholder='Subscribe'/> <br />
+            <form className='shadow-none' onSubmit={subscribe} action="">
+              <input className='w-auto p-1' type="email" required placeholder='Subscribe'/> <br />
               <button className='border-1 rounded-lg bg-orange-900 text-white px-9 shadow-xl'>Submit</button>
             </form>
           </div>
@@ -196,6 +196,17 @@ const Contact = () => {
         </article>
       </footer>
     </div>)
+}
+
+const handleSubmit = (index) => {
+  index.preventDefault()
+  index.target.reset()
+    alert('Thanks for booking appointment with us')
+}
+const subscribe = (index) => {
+  index.preventDefault()
+  index.target.reset()
+    alert('Thanks for subscribed')
 }
 const dateTime = new Date().getFullYear()
 export default Contact

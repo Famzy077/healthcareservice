@@ -32,14 +32,14 @@ const Home = () => {
     setIsOpen(!isOpen)
   }
 
-  const [nav, setNav] = useState(false)
-  const navToogle = () => {
-    setNav(!nav)
-  }
+  // const [nav, setNav] = useState(false)
+  // const navToogle = () => {
+  //   setNav(!nav)
+  // }
   // const navigate = useNavigate()
   Axios.defaults.withCredentials = true;
   const handleLogout = () => {
-    Axios.get('http://localhost:4005/auth/logout')
+    Axios.get('https://healthcareservice-server.vercel.app/auth/logout')
     .then(res => {
       if(res.data.status){
         window.location.href = '/'
@@ -137,7 +137,7 @@ const Home = () => {
               </Typography>
               <div className="flex justify-center gap-2 mb-8">
                 <Button size="lg" color="white">
-                  Explore
+                  <Link to={'/blog'}>Explore</Link>
                 </Button>
             </div>
           </div>
@@ -167,7 +167,7 @@ const Home = () => {
             </Typography>
             <div className="flex gap-2">
               <Button size="lg" color="white">
-                Explore
+                <Link to={'/blog'}>Explore</Link>
               </Button>
             </div>
           </div>
@@ -199,7 +199,7 @@ const Home = () => {
             </Typography>
             <div className="flex gap-2">
               <Button size="lg" color="white">
-                Book Appointment
+                <Link to={'/contact'}>Book Appointment</Link>
               </Button>
             </div>
           </div>
@@ -281,20 +281,20 @@ const Home = () => {
       <div className="section3 items-center">
         <div>
           <div className="animate">
-            <img className='quality' src="https://html.laralink.com/prohealth/assets/img/home_1/about_mini.svg" alt="" />
-            <img className='verify' src="https://html.laralink.com/prohealth/assets/img/icons/tick.svg" alt="" />
+            <img className='quality w-[150px] h-[150px] md:w-[auto md:h-[auto]]' src="https://html.laralink.com/prohealth/assets/img/home_1/about_mini.svg" alt="" />
+            <img className='verify w-[50px] h-[50px] md:w-[auto] md:h-[auto]' src="https://html.laralink.com/prohealth/assets/img/icons/tick.svg" alt="" />
           </div>
           <img src="https://html.laralink.com/prohealth/assets/img/home_1/about.png" alt="pro-health" />
         </div>
         <div>
           <div className="box">
             <h1 className='text-5xl font-bold m-5'>About Us</h1>
-            <p className='text-blue-500 text-3xl font-bold'>PRO HEALTH</p>
+            <p className='text-blue-500 text-3xl font-bold'>HealthCare</p>
           </div>
           <div className="arrorBox">
             <div className="flex gap-8">
               <i className='fa-solid fa-arrow-right text-blue-600 text-4xl'></i>
-              <p className='text-blue-gray-500 text-2xl capitalize'>ProHealth is a team of experienced medical professionals</p>
+              <p className='text-blue-gray-500 text-2xl capitalize'>HealthCare is a team of experienced medical professionals</p>
             </div>
             <p className='text-black'>Dedicated to providing top-quality healthcare services. We believe in a holistic approach to healthcare that focuses on treating the whole person, not just the illness or symptoms.</p>
           </div>
@@ -311,7 +311,7 @@ const Home = () => {
       </div>
 
       <div className="section5">
-        <h1 className='text-blue-900 font-bold text-5xl m-5'>Awards</h1>
+        <h1 className='text-blue-900 font-bold text-4xl m-5'>Awards</h1>
         <div className="awardBox grid md:grid-cols-2">
           <div className="award p-10  border rounded-xl ">
             <div className="box flex place-content-start h-20 items-center m-5 gap-5">
@@ -348,8 +348,8 @@ const Home = () => {
       </div>
 
       <div className="section6">
-        <h1 className='text-5xl text-blue-900 text-center font-bold'>Some Reviews</h1>
-        <h2 className='text-blue-700 text-center font-semibold text-4xl'>Of our clients</h2>
+        <h1 className='text-4xl text-blue-900 text-center font-bold'>Some Reviews</h1>
+        <h2 className='text-blue-700 text-center font-semibold text-3xl'>Of our clients</h2>
         <div className="reviewBox">
           <Reviews/>
         </div>
@@ -371,7 +371,7 @@ const Home = () => {
       </div>
 
       <div id='BOOK' className="section9 m-10">
-        <Appointment/>
+        <Appointment Appointment={Appointment}/>
       </div>
 
       <div className="section10">
@@ -437,8 +437,8 @@ const Home = () => {
           <div>
             <h2>Be Our Subscribers</h2>
             <p>To get the latest news about health from our experts</p>
-            <form className='shadow-none' action="">
-              <input className='w-auto p-1' type="text" placeholder='Subscribe'/> <br />
+            <form className='shadow-none' onSubmit={handleSubmit} action="">
+              <input required className='w-auto p-1' type="email" placeholder='Subscribe'/> <br />
               <button className='border-1 rounded-lg bg-orange-900 text-white px-9 shadow-xl'>Submit</button>
             </form>
           </div>
@@ -462,5 +462,9 @@ const Home = () => {
 
   )
 }
-
+const handleSubmit = (index) => {
+  index.preventDefault()
+  index.target.reset()
+    alert('Thanks for subscribed')
+}
 export default Home

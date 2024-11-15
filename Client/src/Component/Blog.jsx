@@ -2,14 +2,11 @@ import { useState } from 'react'
 import Axios from 'axios'
 import { Link } from 'react-router-dom'
 import Blogs from './BlogData'
-import React from "react"; 
-import { Button, IconButton } from "@material-tailwind/react";
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 const Blog = () => {
   const dateTime = new Date().getFullYear()
     Axios.defaults.withCredentials = true
     const handleLogout = () => {
-        Axios.get('http://localhost:4005/auth/logout')
+        Axios.get('https://healthcareservice-server.vercel.app/auth/logout')
         .then(res => {
             if(res.data.status){
                 window.location.href = '/'
@@ -20,13 +17,13 @@ const Blog = () => {
         })
     }
     const [isOpen, setisOpen] = useState(false)
-    const [nav, setNav] = useState(false)
+    // const [nav, setNav] = useState(false)
     const toggleBtn = () => {
         setisOpen(!isOpen) 
     }
-    const navToogle = () => {
-        setNav(!nav)
-    }
+    // const navToogle = () => {
+    //     setNav(!nav)
+    // }
 
   return (
     <div>
@@ -65,7 +62,7 @@ const Blog = () => {
           </ul>
         </nav>
           <div className='booking'>
-            <h2 className='mt-4 p-[10px] px-[15px] rounded-lg bg-orange-700'><a href="#BOOK">Booking</a></h2>
+          <h2 className='mt-4 p-[10px] px-[15px] rounded-lg bg-orange-700'><Link to={'/contact'}>Booking</Link></h2>
           </div>
 
         {isOpen && (
@@ -128,8 +125,8 @@ const Blog = () => {
           <div>
             <h2>Be Our Subscribers</h2>
             <p>To get the latest news about health from our experts</p>
-            <form className='shadow-none' action="">
-              <input className='w-auto p-1' type="text" placeholder='Subscribe'/> <br />
+            <form className='shadow-none' onSubmit={handleSubmit} action="">
+              <input className='w-auto p-1' required type="email" placeholder='Subscribe'/> <br />
               <button className='border-1 rounded-lg bg-orange-900 text-white px-9 shadow-xl'>Submit</button>
             </form>
           </div>
@@ -150,6 +147,12 @@ const Blog = () => {
       </footer>
     </div>
   )
+}
+
+const handleSubmit = (index) => {
+  index.preventDefault()
+  index.target.reset()
+    alert('Thanks for subscribed')
 }
 
 export default Blog

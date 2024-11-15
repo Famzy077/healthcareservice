@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 const Gallery = () => {
   return (
     <div className=' p-6 rounded-md m-5 gallery'>

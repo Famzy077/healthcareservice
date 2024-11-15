@@ -97,9 +97,7 @@ import {
                   </CardHeader>
                   <CardBody className="mb-6 p-0">
                   <Typography>
-                      &quot;I found solution to all my design needs from Creative Tim. I use
-                      them as a freelancer in my hobby projects for fun! And its really
-                      affordable, very humble guys !!!&quot;
+                      &quot;I recently had to bring my child to ProHealth for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.&quot;
                   </Typography>
                   </CardBody>
               </div>
@@ -139,9 +137,7 @@ import {
                   </CardHeader>
                   <CardBody className="mb-6 p-0">
                   <Typography>
-                      &quot;I found solution to all my design needs from Creative Tim. I use
-                      them as a freelancer in my hobby projects for fun! And its really
-                      affordable, very humble guys !!!&quot;
+                      &quot;I recently had to bring my child to ProHealth for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.!!!&quot;
                   </Typography>
                   </CardBody>
               </div>
@@ -181,9 +177,7 @@ import {
                   </CardHeader>
                   <CardBody className="mb-6 p-0">
                   <Typography>
-                      &quot;I found solution to all my design needs from Creative Tim. I use
-                      them as a freelancer in my hobby projects for fun! And its really
-                      affordable, very humble guys !!!&quot;
+                      &quot;I recently had to bring my child to ProHealth for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.!!!&quot;
                   </Typography>
                   </CardBody>
               </div>
@@ -223,9 +217,7 @@ import {
                   </CardHeader>
                   <CardBody className="mb-6 p-0">
                   <Typography>
-                      &quot;I found solution to all my design needs from Creative Tim. I use
-                      them as a freelancer in my hobby projects for fun! And its really
-                      affordable, very humble guys !!!&quot;
+                      &quot;I recently had to bring my child to ProHealth for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.!!!&quot;
                   </Typography>
                   </CardBody>
               </div>
@@ -265,9 +257,7 @@ import {
                   </CardHeader>
                   <CardBody className="mb-6 p-0">
                   <Typography>
-                      &quot;I found solution to all my design needs from Creative Tim. I use
-                      them as a freelancer in my hobby projects for fun! And its really
-                      affordable, very humble guys !!!&quot;
+                      &quot;I recently had to bring my child to ProHealth for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive. !!!&quot;
                   </Typography>
                   </CardBody>
               </div>

@@ -188,6 +188,10 @@ a:hover{
     display: flex;
     gap: 30px;
 }
+.animate{
+    transform: translateX(60%);
+    margin: 20px;
+}
 .section3 .animate .quality{
     position: relative;
     top: 100px;
@@ -197,8 +201,8 @@ a:hover{
 }
 .section3 .animate .verify{
     position: relative;
-    left: 70px;
-    bottom: 15px;
+    left: 50px;
+    bottom: 2px;
 }
 @keyframes rotate {
     to{
@@ -258,6 +262,10 @@ a:hover{
 .section7 img{
     width: 380px;
     transform: translateY(-30%);
+}
+.BlogBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .blogPost{
@@ -352,6 +360,15 @@ footer .footerArticle{
     .section4 .box h1{
         font-size: 2em;
     }
+    .section3 .animate .verify{
+        position: relative;
+        left: 3rem;
+        bottom: 3px;
+    }
+    .BlogBox{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
     .section5{
         justify-content: start;
         margin: 10px;
@@ -369,7 +386,6 @@ footer .footerArticle{
     .section7{
         height: fit-content;
         margin: 80px 20px;
-        border: 4px solid brown;
     }
     .section7 h1{
         font-size: 1.5em;

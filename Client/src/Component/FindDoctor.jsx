@@ -7,7 +7,7 @@ const FindDoctor = () => {
   const dateTime = new Date().getFullYear()
     Axios.defaults.withCredentials = true
     const handleLogout = () => {
-        Axios.get('http://localhost:4005/auth/logout')
+        Axios.get('https://healthcareservice-server.vercel.app/auth/logout')
         .then(res => {
             if(res.data.status){
                 window.location.href = '/'
@@ -18,13 +18,13 @@ const FindDoctor = () => {
         })
     }
     const [isOpen, setisOpen] = useState(false)
-    const [nav, setNav] = useState(false)
+    // const [nav, setNav] = useState(false)
     const toggleBtn = () => {
         setisOpen(!isOpen) 
     }
-    const navToogle = () => {
-        setNav(!nav)
-    }
+    // const navToogle = () => {
+    //     setNav(!nav)
+    // }
 
     
   return (
@@ -64,7 +64,7 @@ const FindDoctor = () => {
           </ul>
         </nav>
           <div className='booking'>
-            <h2 className='mt-4 p-[10px] px-[15px] rounded-lg bg-orange-700'><a href="#BOOK">Booking</a></h2>
+          <h2 className='mt-4 p-[10px] px-[15px] rounded-lg bg-orange-700'><Link to={'/contact'}>Booking</Link></h2>
           </div>
 
         {isOpen && (

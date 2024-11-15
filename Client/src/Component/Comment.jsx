@@ -29,26 +29,26 @@ const Comment = () => {
     <div className="comment">
         <main>
             <h1 className='text-blue-700 text-3xl text-center'>What People</h1>
-            <h2 className='text-5xl mb-5  font-bold text-center text-light-blue-900'>Usually Asked</h2>
+            <h2 className='text-4xl mb-5  font-bold text-center text-light-blue-900'>Usually Asked</h2>
         </main>
 
         <section className="commentBox">
             <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-                <AccordionHeader onClick={() => handleOpen(1)}>What services does ProHealth offer?</AccordionHeader>
+                <AccordionHeader onClick={() => handleOpen(1)}>What services does HealthCare offer?</AccordionHeader>
                 <AccordionBody>
-                We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                ourselves and actualize our dreams.
+                  We&apos;re not always in the position that we want to be at. We&apos;re constantly
+                  growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+                  ourselves and actualize our dreams.
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
                 <AccordionHeader onClick={() => handleOpen(2)}>
-                How do I schedule an appointment with ProHealth?
+                How do I schedule an appointment with HealthCare?
                 </AccordionHeader>
                 <AccordionBody>
-                We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                ourselves and actualize our dreams.
+                  We&apos;re not always in the position that we want to be at. We&apos;re constantly
+                  growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+                  ourselves and actualize our dreams.
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
@@ -56,9 +56,9 @@ const Comment = () => {
                 Do you accept insurance?
                 </AccordionHeader>
                 <AccordionBody>
-                We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                ourselves and actualize our dreams.
+                  We&apos;re not always in the position that we want to be at. We&apos;re constantly
+                  growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+                  ourselves and actualize our dreams.
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
@@ -66,9 +66,9 @@ const Comment = () => {
                 What should I bring to my appointment?
                 </AccordionHeader>
                 <AccordionBody>
-                We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                ourselves and actualize our dreams.
+                  We&apos;re not always in the position that we want to be at. We&apos;re constantly
+                  growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+                  ourselves and actualize our dreams.
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
@@ -76,9 +76,9 @@ const Comment = () => {
                 How do I request a prescription refill?
                 </AccordionHeader>
                 <AccordionBody>
-                We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                ourselves and actualize our dreams.
+                  We&apos;re not always in the position that we want to be at. We&apos;re constantly
+                  growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+                  ourselves and actualize our dreams.
                 </AccordionBody>
             </Accordion>
         </section>
