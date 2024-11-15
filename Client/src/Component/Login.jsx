@@ -16,10 +16,19 @@ const Login = () => {
     Axios.defaults.withCredentials = true;
     const HandleSubmit = (e) => {
       e.preventDefault();
-      Axios.post('http://localhost:4005//auth/login', {
+      Axios.post('http://localhost:4005/auth/login', {
         email,
         password
       })
+
+      // fetch({
+        //   method: 'POST',
+        //   url: "http://localhost:4005//auth/login",
+        //   headers: {'Content-Type': 'application/json;charset=UTF-8', 'Access-Control-Allow-Origin': '*','Access-Control-Allow-Credentials': 'true' , Accept:'application/json'},
+        //   data:{
+        //     country:localStorage.getItem('locale')
+        //   }
+        // })
       .then(res => {
         if (res.data.status) {
           navigate('/home');

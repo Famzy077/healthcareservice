@@ -13,7 +13,7 @@ const Signup = () => {
   const navigate = useNavigate()
   const HandleSubmit = (e) => {
     e.preventDefault()
-    Axios.post('https://localhost://4005//auth/signup', {
+    Axios.post('http://localhost:4005/auth/signup', {
       username,
       email,
       password

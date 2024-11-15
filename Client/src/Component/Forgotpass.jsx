@@ -12,7 +12,7 @@ const Forgotpass = () => {
         }).then(res => {
             if(res.data.status){
               alert('Check your email for reset password link')
-              navigate('/login')
+              navigate('/')
             }
         }).catch(err => console.log(err)
         )
